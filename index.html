@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Red Team Career Roadmap | Tushar</title>
+<title>Red Team Career Dashboard | Tushar</title>
 
 <style>
 
@@ -42,8 +43,11 @@ header h1 {
 .card {
 
     background: #161b22;
+
     padding: 25px;
+
     margin-bottom: 25px;
+
     border-radius: 15px;
 
     box-shadow: 0 0 25px rgba(0,255,200,0.15);
@@ -53,38 +57,22 @@ header h1 {
 }
 
 .card:hover {
-
     transform: scale(1.02);
-
 }
 
 /* Stage Colors */
 
-.beginner {
-    border-left: 6px solid #00ff88;
-}
-
-.junior {
-    border-left: 6px solid #ffaa00;
-}
-
-.intermediate {
-    border-left: 6px solid #ff4444;
-}
-
-.advanced {
-    border-left: 6px solid #a855f7;
-}
-
-.elite {
-    border-left: 6px solid #00d4ff;
-}
+.beginner { border-left: 6px solid #00ff88; }
+.junior { border-left: 6px solid #ffaa00; }
+.intermediate { border-left: 6px solid #ff4444; }
+.advanced { border-left: 6px solid #a855f7; }
+.elite { border-left: 6px solid #00d4ff; }
 
 /* Salary Box */
 
 .salary {
 
-    background: #000000;
+    background: black;
 
     padding: 15px;
 
@@ -94,25 +82,7 @@ header h1 {
 
 }
 
-/* Badge */
-
-.badge {
-
-    background: #00ffc8;
-
-    color: black;
-
-    padding: 5px 10px;
-
-    border-radius: 8px;
-
-    font-size: 12px;
-
-    margin-right: 6px;
-
-}
-
-/* Progress Bar */
+/* Progress */
 
 .progress {
 
@@ -133,6 +103,34 @@ header h1 {
     background: #00ffc8;
 
     border-radius: 10px;
+
+}
+
+/* Button */
+
+button {
+
+    background: #00ffc8;
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+
+}
+
+/* Hidden */
+
+.content {
+
+    display: none;
+
+    margin-top: 15px;
 
 }
 
@@ -158,51 +156,73 @@ footer {
 
 </style>
 
+<script>
+
+function toggle(id) {
+
+var x = document.getElementById(id);
+
+if (x.style.display === "block") {
+    x.style.display = "none";
+} else {
+    x.style.display = "block";
+}
+
+}
+
+</script>
+
 </head>
 
 <body>
 
 <header>
 
-<h1>🔥 Red Team THM Career Roadmap</h1>
+<h1>🔥 Red Team Career Dashboard</h1>
 
 <p>
-From Beginner to Elite Red Team Operator
+TryHackMe + SOC + Red Team Career Path
 </p>
 
 </header>
 
 <div class="container">
 
-<!-- Beginner -->
+<!-- ========================= -->
+<!-- BEGINNER -->
+<!-- ========================= -->
 
 <div class="card beginner">
 
-<h2>🟢 Beginner Level</h2>
+<h2>🟢 Beginner — Foundations</h2>
 
-<span class="badge">Foundation</span>
+<button onclick="toggle('beginner')">
+Show Labs
+</button>
 
-<p>
-Start with basic networking, Linux, and scanning.
-</p>
+<div id="beginner" class="content">
 
-<h3>📚 Labs</h3>
+<h3>📚 THM Labs</h3>
 
 <ul>
 
 <li>Pre Security Path</li>
+<li>Introduction to Cyber Security</li>
+<li>Complete Beginner Path</li>
+
 <li>Linux Fundamentals 1–3</li>
 <li>Windows Fundamentals 1–3</li>
+
 <li>Networking Fundamentals</li>
+
 <li>Nmap</li>
 <li>Burp Suite Basics</li>
+<li>OWASP Top 10</li>
 
 </ul>
 
 <div class="progress">
-
 <div class="progress-bar" style="width:20%"></div>
-
 </div>
 
 <div class="salary">
@@ -210,85 +230,98 @@ Start with basic networking, Linux, and scanning.
 💼 Job Roles:
 
 <ul>
-
 <li>SOC Analyst L1</li>
 <li>Security Intern</li>
-
 </ul>
 
-💰 Salary (India):
+🌍 Global Salary:
 
-<b>₹2.5 LPA – ₹4.5 LPA</b>
+<b>$40,000 – $65,000</b>
+
+🇮🇳 India:
+
+<b>₹2.5 – ₹4.5 LPA</b>
 
 </div>
 
 </div>
 
-<!-- Junior -->
+</div>
+
+<!-- ========================= -->
+<!-- JUNIOR -->
+<!-- ========================= -->
 
 <div class="card junior">
 
 <h2>🟡 Junior Pentester</h2>
 
-<span class="badge">Pentesting</span>
+<button onclick="toggle('junior')">
+Show Labs
+</button>
 
-<h3>📚 Labs</h3>
+<div id="junior" class="content">
 
 <ul>
 
 <li>Junior Pentester Path</li>
+
 <li>Metasploit</li>
 <li>Hydra</li>
 <li>Gobuster</li>
+
 <li>Linux PrivEsc</li>
 <li>Windows PrivEsc</li>
 
-<li>Machines:
-<ul>
+<li>Machines:</li>
+
 <li>Blue</li>
 <li>Kenobi</li>
 <li>Ice</li>
 <li>Mr Robot</li>
-</ul>
-
-</li>
 
 </ul>
 
 <div class="progress">
-
 <div class="progress-bar" style="width:40%"></div>
-
 </div>
 
 <div class="salary">
 
-💼 Job Roles:
+💼 Roles:
 
 <ul>
-
 <li>Junior Pentester</li>
 <li>Security Analyst</li>
-
 </ul>
 
-💰 Salary (India):
+🌍 Global:
 
-<b>₹4 LPA – ₹8 LPA</b>
+<b>$65,000 – $90,000</b>
+
+🇮🇳 India:
+
+<b>₹4 – ₹8 LPA</b>
 
 </div>
 
 </div>
 
-<!-- Intermediate -->
+</div>
+
+<!-- ========================= -->
+<!-- INTERMEDIATE -->
+<!-- ========================= -->
 
 <div class="card intermediate">
 
-<h2>🟠 Intermediate Level</h2>
+<h2>🟠 Intermediate — Active Directory</h2>
 
-<span class="badge">Active Directory</span>
+<button onclick="toggle('intermediate')">
+Show Labs
+</button>
 
-<h3>📚 Labs</h3>
+<div id="intermediate" class="content">
 
 <ul>
 
@@ -300,51 +333,54 @@ Start with basic networking, Linux, and scanning.
 <li>Attacking Kerberos</li>
 <li>Lateral Movement</li>
 
-<li>Machines:
-<ul>
+<li>Machines:</li>
+
 <li>Overpass</li>
 <li>Relevant</li>
 <li>Retro</li>
-</ul>
-
-</li>
 
 </ul>
 
 <div class="progress">
-
 <div class="progress-bar" style="width:60%"></div>
-
 </div>
 
 <div class="salary">
 
-💼 Job Roles:
+💼 Roles:
 
 <ul>
-
 <li>Penetration Tester</li>
 <li>Security Engineer</li>
-
 </ul>
 
-💰 Salary (India):
+🌍 Global:
 
-<b>₹8 LPA – ₹15 LPA</b>
+<b>$90,000 – $130,000</b>
+
+🇮🇳 India:
+
+<b>₹8 – ₹15 LPA</b>
 
 </div>
 
 </div>
 
-<!-- Advanced -->
+</div>
+
+<!-- ========================= -->
+<!-- ADVANCED -->
+<!-- ========================= -->
 
 <div class="card advanced">
 
 <h2>🔴 Advanced Red Team</h2>
 
-<span class="badge">Red Team Ops</span>
+<button onclick="toggle('advanced')">
+Show Labs
+</button>
 
-<h3>📚 Labs</h3>
+<div id="advanced" class="content">
 
 <ul>
 
@@ -359,39 +395,45 @@ Start with basic networking, Linux, and scanning.
 </ul>
 
 <div class="progress">
-
 <div class="progress-bar" style="width:80%"></div>
-
 </div>
 
 <div class="salary">
 
-💼 Job Roles:
+💼 Roles:
 
 <ul>
-
 <li>Red Team Operator</li>
 <li>Offensive Security Engineer</li>
-
 </ul>
 
-💰 Salary (India):
+🌍 Global:
 
-<b>₹15 LPA – ₹25 LPA</b>
+<b>$130,000 – $180,000+</b>
+
+🇮🇳 India:
+
+<b>₹15 – ₹30+ LPA</b>
 
 </div>
 
 </div>
 
-<!-- Elite -->
+</div>
+
+<!-- ========================= -->
+<!-- ELITE -->
+<!-- ========================= -->
 
 <div class="card elite">
 
 <h2>⚫ Elite Red Team</h2>
 
-<span class="badge">Enterprise</span>
+<button onclick="toggle('elite')">
+Show Labs
+</button>
 
-<h3>📚 Labs</h3>
+<div id="elite" class="content">
 
 <ul>
 
@@ -405,27 +447,111 @@ Start with basic networking, Linux, and scanning.
 </ul>
 
 <div class="progress">
-
 <div class="progress-bar" style="width:100%"></div>
-
 </div>
 
 <div class="salary">
 
-💼 Job Roles:
+💼 Roles:
+
+<ul>
+<li>Senior Red Team Operator</li>
+<li>Lead Pentester</li>
+</ul>
+
+🌍 Global:
+
+<b>$150,000 – $200,000+</b>
+
+🇮🇳 India:
+
+<b>₹20 – ₹35+ LPA</b>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- SOC SKILLS -->
+<!-- ========================= -->
+
+<div class="card intermediate">
+
+<h2>🛡️ SOC Analyst Skills</h2>
 
 <ul>
 
-<li>Senior Red Team Operator</li>
-<li>Lead Pentester</li>
+<li>Networking Basics</li>
+<li>Linux Commands</li>
+<li>Windows Logs</li>
+<li>Incident Response</li>
+<li>Log Analysis</li>
+
+<li>Tools:</li>
+
+<li>Wireshark</li>
+<li>Splunk</li>
+<li>Wazuh</li>
+<li>ELK Stack</li>
 
 </ul>
 
-💰 Salary (India):
+<div class="salary">
 
-<b>₹20 LPA – ₹35+ LPA</b>
+💼 SOC Analyst Salary:
+
+🌍 Global:
+
+<b>$40,000 – $65,000</b>
+
+🇮🇳 India:
+
+<b>₹2.5 – ₹5 LPA</b>
 
 </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- CAREER PATH -->
+<!-- ========================= -->
+
+<div class="card advanced">
+
+<h2>🚀 Career Progression Path</h2>
+
+<ul>
+
+<li>SOC Analyst L1</li>
+<li>SOC Analyst L2</li>
+<li>Security Engineer</li>
+<li>Pentester</li>
+<li>Red Team Operator</li>
+<li>Senior Red Team Lead</li>
+
+</ul>
+
+</div>
+
+<!-- ========================= -->
+<!-- GLOBAL SALARY -->
+<!-- ========================= -->
+
+<div class="card elite">
+
+<h2>🌍 Global Salary Overview</h2>
+
+<ul>
+
+<li>Beginner: $40k–$65k</li>
+<li>Junior: $65k–$90k</li>
+<li>Intermediate: $90k–$130k</li>
+<li>Advanced: $130k–$180k+</li>
+<li>Elite: $150k–$200k+</li>
+
+</ul>
 
 </div>
 
@@ -440,7 +566,7 @@ Start with basic networking, Linux, and scanning.
 </div>
 
 <p>
-Professional Red Team Career Dashboard
+Professional Cybersecurity Career Dashboard
 </p>
 
 </footer>
